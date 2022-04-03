@@ -1,0 +1,1792 @@
+<script id="resource-template" type="text/x-handlebars-template">
+	{{#ifEq language 'ru'}}
+		{{#resources}}
+		<div class="resource" id="{{ID}}">	
+			<h4>
+				{{deposit_name_ru}} {{site_name_ru}}
+			</h4>
+		</div>
+		{{/resources}}
+	{{/ifEq}}
+	{{#ifEq language 'en'}}
+		{{#resources}}
+		<div class="resource" id="{{ID}}">	
+			<h4>
+				{{deposit_name_ru}} {{site_name_ru}}
+			</h4>
+		</div>
+		{{/resources}}
+	{{/ifEq}}
+	{{#ifEq language 'uz'}}
+		{{#resources}}
+		<div class="resource" id="{{ID}}">	
+			<h4>
+				{{deposit_name_ru}} {{site_name_ru}}
+			</h4>
+		</div>
+		{{/resources}}
+	{{/ifEq}}
+</script>
+<script id="control-regions-template" type="text/x-handlebars-template">
+	{{#ifEq language 'ru'}}
+		{{#regions}}
+		<option value="{{id}}">
+			{{region_name_ru}}
+		</option>
+		{{/regions}}
+	{{/ifEq}}
+	{{#ifEq language 'en'}}
+		{{#regions}}
+		<option value="{{id}}">
+			{{region_name_ru}}
+		</option>
+		{{/regions}}
+	{{/ifEq}}
+	{{#ifEq language 'uz'}}
+		{{#regions}}
+		<option value="{{id}}">
+			{{region_name_ru}}
+		</option>
+		{{/regions}}
+	{{/ifEq}}
+</script>
+<script id="control-minerals-template" type="text/x-handlebars-template">
+	{{#ifEq language 'ru'}}
+		{{#minerals}}
+		<option value="{{id}}">
+			{{mineral_name_ru}}
+		</option>
+		{{/minerals}}
+	{{/ifEq}}
+	{{#ifEq language 'en'}}
+		{{#minerals}}
+		<option value="{{id}}">
+			{{mineral_name_ru}}
+		</option>
+		{{/minerals}}
+	{{/ifEq}}
+	{{#ifEq language 'uz'}}
+		{{#minerals}}
+		<option value="{{id}}">
+			{{mineral_name_ru}}
+		</option>
+		{{/minerals}}
+	{{/ifEq}}
+</script>
+<script id="control-statuses-template" type="text/x-handlebars-template">
+	{{#ifEq language 'ru'}}
+		{{#statuses}}
+			<option value="{{id}}">
+			{{status_name_ru}}
+		</option>
+		{{/statuses}}
+	{{/ifEq}}
+	{{#ifEq language 'en'}}
+		{{#statuses}}
+			<option value="{{id}}">
+			{{status_name_ru}}
+		</option>
+		{{/statuses}}
+	{{/ifEq}}
+	{{#ifEq language 'uz'}}
+		{{#statuses}}
+			<option value="{{id}}">
+			{{status_name_ru}}
+		</option>
+		{{/statuses}}
+	{{/ifEq}}
+</script>
+<script id="control-areas-template" type="text/x-handlebars-template">
+	{{#ifEq language 'ru'}}
+		{{#areas}}
+			<option value="{{id}}">
+				{{area_name_ru}}
+			</option>
+		{{/areas}}
+	{{/ifEq}}
+	{{#ifEq language 'en'}}
+		{{#areas}}
+			<option value="{{id}}">
+				{{area_name_ru}}
+			</option>
+		{{/areas}}
+	{{/ifEq}}
+	{{#ifEq language 'uz'}}
+		{{#areas}}
+			<option value="{{id}}">
+				{{area_name_ru}}
+			</option>
+		{{/areas}}
+	{{/ifEq}}
+</script>
+<script id="control-resource-kinds-template" type="text/x-handlebars-template">
+	{{#ifEq language 'ru'}}
+		{{#resource_kinds}}
+		<option value="{{kind_id}}">
+			{{kind_name_ru}}
+		</option>
+		{{/resource_kinds}}
+	{{/ifEq}}
+	{{#ifEq language 'en'}}
+		{{#resource_kinds}}
+		<option value="{{kind_id}}">
+			{{kind_name_ru}}
+		</option>
+		{{/resource_kinds}}
+	{{/ifEq}}
+	{{#ifEq language 'uz'}}
+		{{#resource_kinds}}
+		<option value="{{kind_id}}">
+			{{kind_name_ru}}
+		</option>
+		{{/resource_kinds}}
+	{{/ifEq}}
+</script>
+<script id="control-resource-groups-template" type="text/x-handlebars-template">
+	{{#ifEq language 'ru'}}
+		{{#resource_groups}}
+		<option value="{{group_id}}">
+			{{group_name_ru}}
+		</option>
+		{{/resource_groups}}
+	{{/ifEq}}
+	{{#ifEq language 'en'}}
+		{{#resource_groups}}
+		<option value="{{group_id}}">
+			{{group_name_ru}}
+		</option>
+		{{/resource_groups}}
+	{{/ifEq}}
+	{{#ifEq language 'uz'}}
+		{{#resource_groups}}
+		<option value="{{group_id}}">
+			{{group_name_ru}}
+		</option>
+		{{/resource_groups}}
+	{{/ifEq}}
+</script>
+<script id="control-resource-types-template"  type="text/x-handlebars-template">
+	{{#ifEq language 'ru'}}
+		{{#resource_types}}
+		<option value="{{type_id}}">
+			{{type_name_ru}}
+		</option>
+		{{/resource_types}}
+	{{/ifEq}}
+	{{#ifEq language 'en'}}
+		{{#resource_types}}
+		<option value="{{type_id}}">
+			{{type_name_ru}}
+		</option>
+		{{/resource_types}}
+	{{/ifEq}}
+	{{#ifEq language 'uz'}}
+		{{#resource_types}}
+		<option value="{{type_id}}">
+			{{type_name_ru}}
+		</option>
+		{{/resource_types}}
+	{{/ifEq}}
+</script>
+<script id="control-distances-template"  type="text/x-handlebars-template">
+	{{#distances}}
+	<option value="{{distance_m}}">
+		{{distance_km}}
+	</option>
+	{{/distances}}
+</script>
+<script id="clustered-resources-template" type="text/x-handlebars-template">
+	{{#ifEq language 'ru'}}
+		<div style="margin-top: 10px; margin-right: 0px">
+			{{#resources}}
+			<div class="resource" id="clustered-{{ID}}">	
+				<h4>
+					{{deposit_name_ru}} {{site_name_ru}}, {{region_name_ru}}, {{area_name_ru}} район
+				</h4>
+			</div>
+			{{/resources}}
+		</div>
+	{{/ifEq}}
+	{{#ifEq language 'en'}}
+		<div style="margin-top: 10px; margin-right: 0px">
+			{{#resources}}
+			<div class="resource" id="clustered-{{ID}}">	
+				<h4>
+					{{deposit_name_ru}} {{site_name_ru}}, {{region_name_ru}}, {{area_name_ru}} district
+				</h4>
+			</div>
+			{{/resources}}
+		</div>
+	{{/ifEq}}
+	{{#ifEq language 'uz'}}
+		<div style="margin-top: 10px; margin-right: 0px">
+			{{#resources}}
+			<div class="resource" id="clustered-{{ID}}">	
+				<h4>
+					{{deposit_name_ru}} {{site_name_ru}}, {{region_name_ru}}, {{area_name_ru}} район
+				</h4>
+			</div>
+			{{/resources}}
+		</div>
+	{{/ifEq}}
+</script>
+<script id="header-template" type="text/x-handlebars-template">
+	{{#ifEq language 'ru'}}
+		<div>
+			<!-- div class="top-controls right">
+				<img src="images/settings.png" id="settings" style="cursor: pointer;" data-toggle="tooltip" data-placement="bottom" title="Административная страница"/>
+			</div -->
+			<div class="top-controls right">
+				<img src="images/login.png" id="login" style="cursor: pointer;" data-toggle="tooltip" data-placement="bottom" title="Авторизация"/>
+			</div>
+			<div class="top-controls right">
+				<img src="images/help.png" id="help" data-toggle="tooltip" data-placement="bottom" title="Справка"/>
+			</div>
+			<div class="top-controls right">
+				<img src="images/fold.png" id="fold" data-toggle="tooltip" data-placement="bottom" title="Свернуть/развернуть боковую панель"/>
+			</div>
+			<div class="top-controls right">
+				<img src="images/disabled_location.png" id="search_by_location" data-toggle="tooltip" data-placement="bottom" title="Поиск по расстоянию"/>
+			</div>
+			<div class="top-controls right">
+				<img src="images/extended_search.png" id="extended_search" data-toggle="tooltip" data-placement="bottom" title="Расширенный поиск"/>
+			</div>
+			<div class="top-controls right">
+				<img src="images/perspective.png" id="investments_search" style="cursor: pointer;" data-toggle="tooltip" data-placement="bottom" title="Для инвесторов"/>
+			</div>
+			<div class="top-controls right">
+				<img src="images/info.png" id="info_graphics" data-toggle="tooltip" data-placement="bottom" title="Инфографика"/>
+			</div>
+		</div>
+	{{/ifEq}}
+	{{#ifEq language 'en'}}
+		<div>
+			<!-- div class="top-controls right">
+				<img src="images/settings.png" id="settings" style="cursor: pointer;" data-toggle="tooltip" data-placement="bottom" title="Control panel"/>
+			</div>
+			<div class="top-controls right">
+				<img src="images/login.png" id="login" style="cursor: pointer;" data-toggle="tooltip" data-placement="bottom" title="Authorization"/>
+			</div -->
+			<div class="top-controls right">
+				<img src="images/help.png" id="help" data-toggle="tooltip" data-placement="bottom" title="Help"/>
+			</div>
+			<div class="top-controls right">
+				<img src="images/fold.png" id="fold" data-toggle="tooltip" data-placement="bottom" title="Fold/unfold side panel"/>
+			</div>
+			<div class="top-controls right">
+				<img src="images/disabled_location.png" id="search_by_location" data-toggle="tooltip" data-placement="bottom" title="Search by distance"/>
+			</div>
+			<div class="top-controls right">
+				<img src="images/extended_search.png" id="extended_search" data-toggle="tooltip" data-placement="bottom" title="Extended search"/>
+			</div>
+			<div class="top-controls right">
+				<img src="images/perspective.png" id="perspective" style="cursor: pointer;" data-toggle="tooltip" data-placement="bottom" title="Для инвесторов"/>
+			</div>
+			<div class="top-controls right">
+				<img src="images/info.png" id="info_graphics" data-toggle="tooltip" data-placement="bottom" title="Инфографика"/>
+			</div>
+		</div>
+	{{/ifEq}}
+	{{#ifEq language 'uz'}}
+		<div>
+			<!-- div class="top-controls right">
+				<img src="images/settings.png" id="settings" style="cursor: pointer;" data-toggle="tooltip" data-placement="bottom" title="Административная страница"/>
+			</div>
+			<div class="top-controls right">
+				<img src="images/login.png" id="login" style="cursor: pointer;" data-toggle="tooltip" data-placement="bottom" title="Авторизация"/>
+			</div -->
+			<div class="top-controls right">
+				<img src="images/help.png" id="help" data-toggle="tooltip" data-placement="bottom" title="Справка"/>
+			</div>
+			<div class="top-controls right">
+				<img src="images/fold.png" id="fold" data-toggle="tooltip" data-placement="bottom" title="Свернуть/развернуть боковую панель"/>
+			</div>
+			<div class="top-controls right">
+				<img src="images/disabled_location.png" id="search_by_location" data-toggle="tooltip" data-placement="bottom" title="Поиск по расстоянию"/>
+			</div>
+			<div class="top-controls right">
+				<img src="images/extended_search.png" id="extended_search" data-toggle="tooltip" data-placement="bottom" title="Расширенный поиск"/>
+			</div>
+			<div class="top-controls right">
+				<img src="images/perspective.png" id="perspective" style="cursor: pointer;" data-toggle="tooltip" data-placement="bottom" title="Для инвесторов"/>
+			</div>
+			<div class="top-controls right">
+				<img src="images/info.png" id="info_graphics" data-toggle="tooltip" data-placement="bottom" title="Инфографика"/>
+			</div>
+		</div>
+	{{/ifEq}}
+</script>
+<script id="print-button-template" type="text/x-handlebars-template">
+	{{#ifEq language 'ru'}}
+	<img src="images/print.png" width="48px" data-toggle="tooltip" data-placement="bottom" title="Печать"/>
+	{{/ifEq}}
+	{{#ifEq language 'en'}}
+	<img src="images/print.png" width="48px" data-toggle="tooltip" data-placement="bottom" title="Print"/>
+	{{/ifEq}}
+	{{#ifEq language 'uz'}}
+	<img src="images/print.png" width="48px" data-toggle="tooltip" data-placement="bottom" title="Печать"/>
+	{{/ifEq}}
+</script>
+<script id="resource-info-close-button-template" type="text/x-handlebars-template">
+	{{#ifEq language 'ru'}}
+	<img src="images/close.png" width="48px" data-toggle="tooltip" data-placement="bottom" title="Закрыть"/>
+	{{/ifEq}}
+	{{#ifEq language 'en'}}
+	<img src="images/close.png" width="48px" data-toggle="tooltip" data-placement="bottom" title="Close"/>
+	{{/ifEq}}
+	{{#ifEq language 'uz'}}
+	<img src="images/close.png" width="48px" data-toggle="tooltip" data-placement="bottom" title="Закрыть"/>
+	{{/ifEq}}	
+</script>
+<script id="investment-info-close-button-template" type="text/x-handlebars-template">
+	{{#ifEq language 'ru'}}
+	<img src="images/close.png" width="48px" data-toggle="tooltip" data-placement="bottom" title="Закрыть"/>
+	{{/ifEq}}
+	{{#ifEq language 'en'}}
+	<img src="images/close.png" width="48px" data-toggle="tooltip" data-placement="bottom" title="Close"/>
+	{{/ifEq}}
+	{{#ifEq language 'uz'}}
+	<img src="images/close.png" width="48px" data-toggle="tooltip" data-placement="bottom" title="Закрыть"/>
+	{{/ifEq}}	
+</script>
+<script id="login-info-close-button-template" type="text/x-handlebars-template">
+	{{#ifEq language 'ru'}}
+	<img src="images/close.png" width="48px" data-toggle="tooltip" data-placement="bottom" title="Закрыть"/>
+	{{/ifEq}}
+	{{#ifEq language 'en'}}
+	<img src="images/close.png" width="48px" data-toggle="tooltip" data-placement="bottom" title="Close"/>
+	{{/ifEq}}
+	{{#ifEq language 'uz'}}
+	<img src="images/close.png" width="48px" data-toggle="tooltip" data-placement="bottom" title="Закрыть"/>
+	{{/ifEq}}
+</script>
+<script id="clustered-resources-close-button-template" type="text/x-handlebars-template">
+	{{#ifEq language 'ru'}}
+	<img src="images/close.png" width="48px" data-toggle="tooltip" data-placement="bottom" title="Закрыть"/>
+	{{/ifEq}}
+	{{#ifEq language 'en'}}
+	<img src="images/close.png" width="48px" data-toggle="tooltip" data-placement="bottom" title="Close"/>
+	{{/ifEq}}
+	{{#ifEq language 'uz'}}
+	<img src="images/close.png" width="48px" data-toggle="tooltip" data-placement="bottom" title="Закрыть"/>
+	{{/ifEq}}	
+</script>
+<script id="image-pane-close-button-template" type="text/x-handlebars-template">
+	{{#ifEq language 'ru'}}
+	<img src="images/close.png" width="48px" data-toggle="tooltip" data-placement="bottom" title="Закрыть"/>
+	{{/ifEq}}
+	{{#ifEq language 'en'}}
+	<img src="images/close.png" width="48px" data-toggle="tooltip" data-placement="bottom" title="Close"/>
+	{{/ifEq}}
+	{{#ifEq language 'uz'}}
+	<img src="images/close.png" width="48px" data-toggle="tooltip" data-placement="bottom" title="Закрыть"/>
+	{{/ifEq}}
+</script>
+<script id="magnify-image-close-button-template" type="text/x-handlebars-template">
+	{{#ifEq language 'ru'}}
+	<img src="images/magnifier.png" width="48px" data-toggle="tooltip" data-placement="bottom" title="Увеличить"/>
+	{{/ifEq}}
+	{{#ifEq language 'en'}}
+	<img src="images/magnifier.png" width="48px" data-toggle="tooltip" data-placement="bottom" title="Magnify"/>
+	{{/ifEq}}
+	{{#ifEq language 'uz'}}
+	<img src="images/magnifier.png" width="48px" data-toggle="tooltip" data-placement="bottom" title="Увеличить"/>
+	{{/ifEq}}
+</script>
+<script id="contours-close-button-template" type="text/x-handlebars-template">
+	{{#ifEq language 'ru'}}
+	<img src="images/close.png" width="48px" data-toggle="tooltip" data-placement="bottom" title="Закрыть"/>
+	{{/ifEq}}
+	{{#ifEq language 'en'}}
+	<img src="images/close.png" width="48px" data-toggle="tooltip" data-placement="bottom" title="Close"/>
+	{{/ifEq}}
+	{{#ifEq language 'uz'}}
+	<img src="images/close.png" width="48px" data-toggle="tooltip" data-placement="bottom" title="Закрыть"/>
+	{{/ifEq}}
+</script>
+<script id="magnify-conotours-button-template" type="text/x-handlebars-template">
+	{{#ifEq language 'ru'}}
+	<img src="images/magnifier.png" width="48px" data-toggle="tooltip" data-placement="bottom" title="Увеличить"/>
+	{{/ifEq}}
+	{{#ifEq language 'en'}}
+	<img src="images/magnifier.png" width="48px" data-toggle="tooltip" data-placement="bottom" title="Magnify"/>
+	{{/ifEq}}
+	{{#ifEq language 'uz'}}
+	<img src="images/magnifier.png" width="48px" data-toggle="tooltip" data-placement="bottom" title="Увеличить"/>
+	{{/ifEq}}
+</script>
+<script id="extended-search-close-button-template" type="text/x-handlebars-template">
+	{{#ifEq language 'ru'}}
+	<img src="images/close.png" width="48px" data-toggle="tooltip" data-placement="bottom" title="Закрыть"/>
+	{{/ifEq}}
+	{{#ifEq language 'en'}}
+	<img src="images/close.png" width="48px" data-toggle="tooltip" data-placement="bottom" title="Close"/>
+	{{/ifEq}}
+	{{#ifEq language 'uz'}}
+	<img src="images/close.png" width="48px" data-toggle="tooltip" data-placement="bottom" title="Закрыть"/>
+	{{/ifEq}}
+</script>
+<script id="investments-search-close-button-template" type="text/x-handlebars-template">
+	{{#ifEq language 'ru'}}
+	<img src="images/close.png" width="48px" data-toggle="tooltip" data-placement="bottom" title="Закрыть"/>
+	{{/ifEq}}
+	{{#ifEq language 'en'}}
+	<img src="images/close.png" width="48px" data-toggle="tooltip" data-placement="bottom" title="Close"/>
+	{{/ifEq}}
+	{{#ifEq language 'uz'}}
+	<img src="images/close.png" width="48px" data-toggle="tooltip" data-placement="bottom" title="Закрыть"/>
+	{{/ifEq}}
+</script>
+<script id="registration-form-close-button-template" type="text/x-handlebars-template">
+	{{#ifEq language 'ru'}}
+	<img src="images/close.png" width="48px" data-toggle="tooltip" data-placement="bottom" title="Закрыть"/>
+	{{/ifEq}}
+	{{#ifEq language 'en'}}
+	<img src="images/close.png" width="48px" data-toggle="tooltip" data-placement="bottom" title="Close"/>
+	{{/ifEq}}
+	{{#ifEq language 'uz'}}
+	<img src="images/close.png" width="48px" data-toggle="tooltip" data-placement="bottom" title="Закрыть"/>
+	{{/ifEq}}
+</script>
+<script id="help-close-button-template" type="text/x-handlebars-template">
+	{{#ifEq language 'ru'}}
+	<img src="images/close.png" width="48px" data-toggle="tooltip" data-placement="bottom" title="Закрыть"/>
+	{{/ifEq}}
+	{{#ifEq language 'en'}}
+	<img src="images/close.png" width="48px" data-toggle="tooltip" data-placement="bottom" title="Close"/>
+	{{/ifEq}}
+	{{#ifEq language 'uz'}}
+	<img src="images/close.png" width="48px" data-toggle="tooltip" data-placement="bottom" title="Закрыть"/>
+	{{/ifEq}}
+</script>
+<script id="message-window-close-button-template" type="text/x-handlebars-template">
+	{{#ifEq language 'ru'}}
+	<img src="images/close.png" width="48px" data-toggle="tooltip" data-placement="bottom" title="Закрыть"/>
+	{{/ifEq}}
+	{{#ifEq language 'en'}}
+	<img src="images/close.png" width="48px" data-toggle="tooltip" data-placement="bottom" title="Close"/>
+	{{/ifEq}}
+	{{#ifEq language 'uz'}}
+	<img src="images/close.png" width="48px" data-toggle="tooltip" data-placement="bottom" title="Закрыть"/>
+	{{/ifEq}}
+</script>
+<script id="help-info-template"  type="text/x-handlebars-template">
+	{{#ifEq language 'ru'}}
+	<h4>
+		Справка
+	</h4>
+	<p>
+		Данная программа предназначена для отображения и поиска месторождений
+		полезных ископаемых на карте.
+	</p>
+	<p>
+		Поиск можно производить используя фильтры, расположенные 
+		в окне расширенного поиска. Например, чтобы отфильтровать все 
+		месторождения в определенной области - можно выбрать область 
+		из списка в меню. Поиск можно сузить используя фильтр "Район",
+		который появиться после выбора области в меню.
+	</p>
+	<p>
+		Далее можно применить фильтрацию по виду, группе и типу сырья. 
+		Для этого, в меню необходимо сначала выбрать вид 
+		сырья, затем можно отфильтровать по группе, и наконец, 
+		можно выбрать тип сырья.
+	</p> 
+	<p>
+		Месторождения можно также отфильтровать по имени. Для этого 
+		достаточно ввести частичное или полное наименование (учитывая регистр) 
+		в текстовое поле и нажать ввод.
+	</p>
+	<p>
+		Дополнительно, поиск можно производить по расстоянию от заданной 
+		точки на карте. На первым шаге необходимо активировать данный тип поиска, при помощи нажатия
+		на соответствующую кнопку в меню. После, в отобразившемся окне
+		расширенного поиска, необходимо указать максимальное расстояние и 
+		нажать кнопку "Применить". В результате, при нажатии мышкой на карте, 
+		месторождения отфильтруются по расстоянию.
+	</p>
+	<p>
+		И наконец, для потенциальных инвесторов, данные о месторождениях
+		можно отфильтровать по статусу (например, является ли месторождение
+		разрабатываемым или нет) и количеству запасов (есть ли еще запасы -  
+		свободные для лицензирования, или их нет). Дополнительно, можно 
+		отобразить все месторождения и перспективные площади, выставленные
+		на аукцион. Для этого необходимо нажать на соответствующую кнопку 
+		в меню и нажать кнопку "Применить".
+	</p>
+	<p>
+		Отфильтрованные месторождения отобразятся как список в 
+		правой части приложения (изначально этот список скрыт, но его можно
+		отобразить, нажав на соответствующую кнопку в меню), а также появятся 
+		как сгруппированные маркеры на карте.
+	</p>
+	<p>
+		Для отображения детальной информации о месторождение можно кликнуть по 
+		маркеру на карте или при помощи нажатия на имя месторождения, 
+		отобразившееся в правой части окна приложения. 
+	</p>
+	<!-- p>
+		На данный момент незарегистрированные пользователи видят все нерудные ископаемые. 
+		Для этого необходимо сначала пройти регистрацию (ее можно пройти нажав кнопку "Запросить
+		регистрацию", которую можно найти в меню). Если возникнут вопросы по 
+		поводу авторизации или регистрации, то можно запросить поддержку, направив письмо 
+		по адресу map.uzgeolcom.uz@gmail.com.
+	</p -->
+	{{/ifEq}}
+	{{#ifEq language 'en'}}
+	<h4>
+		Help
+	</h4>
+	<p>
+		This program was design for searching deposits in an interactive fashion
+		on the map of the Republic of Uzbekistan.
+	</p>
+	<p>
+		Поиск можно производить используя фильтры расположенные 
+		в окне расширенного поиска. Например, чтобы отфильтровать все 
+		месторождения в определенной области, можно выбрать область 
+		из списка в меню. Поиск можно сузить используя фильтр "Район",
+		который появиться после выбора области в меню.
+	</p>
+	<p>
+		Далее можно применить фильтрацию по виду, группе и типу полезных 
+		ископаемых. Для этого, в меню необходимо сначала выбрать вид 
+		полезных ископаемых, затем можно отфильтровать по группе, и наконец, 
+		можно выбрать тип полезных ископаемых.
+	</p> 
+	<p>
+		Месторождения можно также отфильтровать по имени. Для этого 
+		достаточно ввести частичное или полное наименование (учитывая регистр) 
+		в текстовое поле и нажать ввод.
+	</p>
+	<p>
+		Дополнительно, поиск можно производить по расстоянию от заданной 
+		точки. На первым шаге необходимо активировать данный тип поиска при помощи нажатия
+		на соответствующую кнопку в меню. После, в отобразившемся окне
+		расширенного поиска, необходимо указать максимальное расстояние и 
+		нажать кнопку "Применить". В результате, при нажатии мышкой на карте, 
+		месторождения отфильтруются по расстоянию.
+	</p>
+	<p>
+		И наконец, для потенциальных инвесторов, данные о месторождениях
+		можно отфильтровать по статусу (например, является ли месторождение
+		разрабатываемым или нет) и количеству запасов (есть ли еще запасы, 
+		свободные для лицензирования, или их нет).
+	</p>
+	<p>
+		Отфильтрованные месторождения отобразятся как список в 
+		правой части приложения (изначально этот список скрыт, но его можно
+		отобразить, нажав на соответствующую кнопку в меню), а также появятся 
+		как сгруппированные маркеры на карте.
+	</p>
+	<p>
+		Для отображения детальной информации о месторождение можно кликнуть по 
+		маркеру на карте или при помощи нажатия на имя месторождения, 
+		отобразившееся в правой части окна приложения. 
+	</p>
+	<p>
+		Для отображения полного списка месторождений необходимо авторизоваться.
+		Для этого необходимо сначала пройти регистрацию (ее можно пройти нажав кнопку "Запросить
+		регистрацию", которую можно найти в меню). Если возникнут вопросы по 
+		поводу авторизации или регистрации, то можно запросить поддержку, направив письмо 
+		по адресу map.uzgeolcom.uz@gmail.com.
+	</p>
+	{{/ifEq}}
+	{{#ifEq language 'uz'}}
+	<h4>
+		Справка
+	</h4>
+	<p>
+		Данная программа предназначена для отображения и поиска месторождений
+		полезных ископаемых на карте.
+	</p>
+	<p>
+		Поиск можно производить используя фильтры расположенные 
+		в окне расширенного поиска. Например, чтобы отфильтровать все 
+		месторождения в определенной области, можно выбрать область 
+		из списка в меню. Поиск можно сузить используя фильтр "Район",
+		который появиться после выбора области в меню.
+	</p>
+	<p>
+		Далее можно применить фильтрацию по виду, группе и типу полезных 
+		ископаемых. Для этого, в меню необходимо сначала выбрать вид 
+		полезных ископаемых, затем можно отфильтровать по группе, и наконец, 
+		можно выбрать тип полезных ископаемых.
+	</p> 
+	<p>
+		Месторождения можно также отфильтровать по имени. Для этого 
+		достаточно ввести частичное или полное наименование (учитывая регистр) 
+		в текстовое поле и нажать ввод.
+	</p>
+	<p>
+		Дополнительно, поиск можно производить по расстоянию от заданной 
+		точки. На первым шаге необходимо активировать данный тип поиска при помощи нажатия
+		на соответствующую кнопку в меню. После, в отобразившемся окне
+		расширенного поиска, необходимо указать максимальное расстояние и 
+		нажать кнопку "Применить". В результате, при нажатии мышкой на карте, 
+		месторождения отфильтруются по расстоянию.
+	</p>
+	<p>
+		И наконец, для потенциальных инвесторов, данные о месторождениях
+		можно отфильтровать по статусу (например, является ли месторождение
+		разрабатываемым или нет) и количеству запасов (есть ли еще запасы, 
+		свободные для лицензирования, или их нет).
+	</p>
+	<p>
+		Отфильтрованные месторождения отобразятся как список в 
+		правой части приложения (изначально этот список скрыт, но его можно
+		отобразить, нажав на соответствующую кнопку в меню), а также появятся 
+		как сгруппированные маркеры на карте.
+	</p>
+	<p>
+		Для отображения детальной информации о месторождение можно кликнуть по 
+		маркеру на карте или при помощи нажатия на имя месторождения, 
+		отобразившееся в правой части окна приложения. 
+	</p>
+	<p>
+		Для отображения полного списка месторождений необходимо авторизоваться.
+		Для этого необходимо сначала пройти регистрацию (ее можно пройти нажав кнопку "Запросить
+		регистрацию", которую можно найти в меню). Если возникнут вопросы по 
+		поводу авторизации или регистрации, то можно запросить поддержку, направив письмо 
+		по адресу map.uzgeolcom.uz@gmail.com.
+	</p>
+	{{/ifEq}}
+</script>
+<script id="login-template" type="text/x-handlebars-template">
+	{{#ifEq language 'ru'}}
+	<form>
+		<table id="login-table">
+			<tr>
+				<td style="border-top: 5px solid; border-bottom: 5px solid; border-color: transparent;">
+					<input type="text" id="username" class="form-control" placeholder="Имя пользователя">
+				</td>
+			</tr>
+			<tr>
+				<td style="border-top: 5px solid; border-bottom: 5px solid; border-color: transparent;">
+					<input type="password" id="password" class="form-control" placeholder="Пароль">
+				</td>
+			</tr>
+			<tr>
+				<td style="border-top: 5px solid; border-bottom: 5px solid; border-color: transparent;">
+					<button id="login-button" class="btn btn-default">Войти</button>
+					<button id="request_registration" class="btn btn-default">Регистрация</button>
+				</td>
+			</tr>
+			<!--tr>
+				<td style="border-top: 5px solid; border-bottom: 5px solid; border-color: transparent;">
+					
+				</td>
+			</tr -->
+			<tr>
+				<td style="border-top: 5px solid; border-bottom: 5px solid; border-color: transparent;">
+					<div class="login-message">
+					</div>
+				</td>
+			</tr>
+		</table>
+	</form>
+	{{/ifEq}}
+	{{#ifEq language 'en'}}
+	<form>
+		<table id="login-table">
+			<tr>
+				<td style="border-top: 5px solid; border-bottom: 5px solid; border-color: transparent;">
+					<input type="text" id="username" class="form-control" placeholder="Username">
+				</td>
+			</tr>
+			<tr>
+				<td style="border-top: 5px solid; border-bottom: 5px solid; border-color: transparent;">
+					<input type="password" id="password" class="form-control" placeholder="Password">
+				</td>
+			</tr>
+			<tr>
+				<td style="border-top: 5px solid; border-bottom: 5px solid; border-color: transparent;">
+					<button id="login-button" class="btn btn-default">Login</button>
+				</td>
+			</tr>
+			<tr>
+				<td style="border-top: 5px solid; border-bottom: 5px solid; border-color: transparent;">
+					<a id="request_registration" style="cursor: pointer; color: white; font-weight: bold">Request registration</a>
+				</td>
+			</tr>
+			<tr>
+				<td style="border-top: 5px solid; border-bottom: 5px solid; border-color: transparent;">
+					<div class="login-message">
+					</div>
+				</td>
+			</tr>
+		</table>
+	</form>
+	{{/ifEq}}
+	{{#ifEq language 'uz'}}
+	<form>
+		<table id="login-table">
+			<tr>
+				<td style="border-top: 5px solid; border-bottom: 5px solid; border-color: transparent;">
+					<input type="text" id="username" class="form-control" placeholder="Имя пользователя">
+				</td>
+			</tr>
+			<tr>
+				<td style="border-top: 5px solid; border-bottom: 5px solid; border-color: transparent;">
+					<input type="password" id="password" class="form-control" placeholder="Пароль">
+				</td>
+			</tr>
+			<tr>
+				<td style="border-top: 5px solid; border-bottom: 5px solid; border-color: transparent;">
+					<button id="login-button" class="btn btn-default">Войти</button>
+				</td>
+			</tr>
+			<tr>
+				<td style="border-top: 5px solid; border-bottom: 5px solid; border-color: transparent;">
+					<a id="request_registration" style="cursor: pointer; color: white; font-weight: bold">Запросить регистрацию</a>
+				</td>
+			</tr>
+			<tr>
+				<td style="border-top: 5px solid; border-bottom: 5px solid; border-color: transparent;">
+					<div class="login-message">
+					</div>
+				</td>
+			</tr>
+		</table>
+	</form>
+	{{/ifEq}}
+</script>
+<script id="registration-form-template" type="text/x-handlebars-template">
+	{{#ifEq language 'ru'}}
+		<div class="content">
+			<form>
+				<div class="form-group">
+					<label id="r_first_name_label">Имя: </label>
+					<input type="text" id="r_first_name" placeholder="Введите имя"/>
+				</div>
+				<div class="form-group">
+					<label id="r_last_name_label">Фамилия: </label>
+					<input type="text" id="r_last_name" placeholder="Введите фамилию"/>
+				</div>
+				<div class="form-group">
+					<label id="r_email_label">E-mail: </label>
+					<input type="text" id="r_email" placeholder="Введите адрес эл. почты"/>
+				</div>
+				<div class="form-group">
+					<label id="r_phone_label">Телефон: </label>
+					<input type="text" id="r_phone" placeholder="Введите телефон в формате +XXX-XX-XXXXXXX">
+				</div>
+				<div class="form-group">
+					<label id="r_description_label">Описание: </label>
+					<input id="r_description" placeholder="Введите описание назначения учетной записи">
+				</div>
+				<button id="request_registration_submit" class="btn btn-default">Отправить запрос</button>
+			</form>
+		</div>
+	{{/ifEq}}
+	{{#ifEq language 'en'}}
+		<div class="content">
+			<form>
+				<div class="form-group">
+					<label id="r_first_name_label">First name: </label>
+					<input type="text" id="r_first_name" placeholder="Enter first name"/>
+				</div>
+				<div class="form-group">
+					<label id="r_last_name_label">Last name: </label>
+					<input type="text" id="r_last_name" placeholder="Enter last name"/>
+				</div>
+				<div class="form-group">
+					<label id="r_email_label">E-mail: </label>
+					<input type="text" id="r_email" placeholder="Enter valid email address"/>
+				</div>
+				<div class="form-group">
+					<label id="r_phone_label">Phone number: </label>
+					<input type="text" id="r_phone" placeholder="Enter phone number in format +XXX-XX-XXXXXXX">
+				</div>
+				<div class="form-group">
+					<label id="r_description_label">Description: </label>
+					<input id="r_description" placeholder="Describe the purpose for which you would like to use this account">
+				</div>
+				<button id="request_registration_submit" class="btn btn-default">Submit</button>
+			</form>
+		</div>
+	{{/ifEq}}
+	{{#ifEq language 'uz'}}
+		<div class="content">
+			<form>
+				<div class="form-group">
+					<label id="r_first_name_label">Имя: </label>
+					<input type="text" id="r_first_name" placeholder="Введите имя"/>
+				</div>
+				<div class="form-group">
+					<label id="r_last_name_label">Фамилия: </label>
+					<input type="text" id="r_last_name" placeholder="Введите фамилию"/>
+				</div>
+				<div class="form-group">
+					<label id="r_email_label">E-mail: </label>
+					<input type="text" id="r_email" placeholder="Введите адрес эл. почты"/>
+				</div>
+				<div class="form-group">
+					<label id="r_phone_label">Телефон: </label>
+					<input type="text" id="r_phone" placeholder="Введите телефон в формате +XXX-XX-XXXXXXX">
+				</div>
+				<div class="form-group">
+					<label id="r_description_label">Описание: </label>
+					<input id="r_description" placeholder="Введите описание назначения учетной записи">
+				</div>
+				<button id="request_registration_submit" class="btn btn-default">Отправить запрос</button>
+			</form>
+		</div>
+	{{/ifEq}}
+</script>
+<script id="investments-search-template" type="text/x-handlebars-template">
+	{{#ifEq language 'ru'}}
+		<div class="content">
+			<h4 align="center">Поиск по объектам, выставленных на аукцион</h4>
+			<form>
+				<div class="form-group">
+					<label id="object_name_label">Объект: </label>
+					<input type="text" id="object_name" placeholder="Наименование объекта"/>
+				</div>
+				<div class="form-group">
+					<label id="investments_regions_label">Область: </label>
+					<select id="investments_regions">
+					</select>
+				</div>
+				<div class="form-group">
+					<label id="investments_areas_label">Район: </label>
+					<select id="investments_areas">
+					</select>
+				</div>
+				<div class="form-group">
+					<label id="minerals_label">Пол. ископаемое: </label>
+					<select id="investments_minerals">
+					</select>
+				</div>
+				<div class="form-group">
+					<button id="investment_search_submit" class="btn btn-default" style="float: right; margin-bottom: 20px">Применить</button>
+				</div>
+			</form>
+		</div>
+	{{/ifEq}}
+	{{#ifEq language 'en'}}
+		<div class="content">
+			<h4 align="center">Search investments</h4>
+			<form>
+				<div class="form-group">
+					<label id="object_name_label">Object name: </label>
+					<input type="text" id="object_name" placeholder="Object name"/>
+				</div>
+				<div class="form-group">
+					<label id="investments_regions_label">Region: </label>
+					<select id="investments_regions">
+					</select>
+				</div>
+				<div class="form-group">
+					<label id="investments_areas_label">Район: </label>
+					<select id="investments_areas">
+					</select>
+				</div>
+				<div class="form-group">
+					<label id="minerals_label">Пол. ископаемое: </label>
+					<select id="minerals">
+					</select>
+				</div>
+				<div class="form-group">
+					<button id="investment_search_submit" class="btn btn-default" style="float: right; margin-bottom: 20px">Применить</button>
+				</div>
+			</form>
+		</div>
+	{{/ifEq}}
+	{{#ifEq language 'uz'}}
+		<div class="content">
+			<h4 align="center">Поиск по инвестициям</h4>
+			<form>
+				<div class="form-group">
+					<label id="object_name_label">Месторождение: </label>
+					<input type="text" id="object_name" placeholder="Наименование объекта"/>
+				</div>
+				<div class="form-group">
+					<label id="investments_regions_label">Область: </label>
+					<select id="investments_regions">
+					</select>
+				</div>
+				<div class="form-group">
+					<label id="investments_areas_label">Район: </label>
+					<select id="investments_areas">
+					</select>
+				</div>
+				<div class="form-group">
+					<label id="minerals_label">Пол. ископаемое: </label>
+					<select id="minerals">
+					</select>
+				</div>
+				<div class="form-group">
+					<button id="investment_search_submit" class="btn btn-default" style="float: right; margin-bottom: 20px">Применить</button>
+				</div>
+			</form>
+		</div>
+	{{/ifEq}}
+</script>
+<script id="extended-search-template" type="text/x-handlebars-template">
+	{{#ifEq language 'ru'}}
+		<div class="content">
+			<h4 align="center">Поиск по изученным месторождениям</h4>
+			<form>
+				<div class="form-group">
+					<label id="resource_name_label">Месторождение: </label>
+					<input type="text" id="resource_name" placeholder="Наименование месторождения"/>
+				</div>
+				<div class="form-group">
+					<label id="regions_label">Область: </label>
+					<select id="regions">
+					</select>
+				</div>
+				<div class="form-group">
+					<label id="areas_label">Район: </label>
+					<select id="areas">
+					</select>
+				</div>
+				<div class="form-group">
+					<label id="resource_kinds_label">Вид: </label>
+					<select id="resource_kinds">
+					</select>
+				</div>
+				<div class="form-group">
+					<label id="resource_groups_label">Группа: </label>
+					<select id="resource_groups">
+					</select>
+				</div>
+				<div class="form-group">
+					<label id="resource_types_label">Тип: </label>
+					<select id="resource_types">
+					</select>
+				</div>
+				<div class="form-group">
+					<label id="distances_label">Расстояние: </label>
+					<select id="distances">
+					</select>
+				</div>
+				<div class="form-group">
+					<label id="status_label">Статус: </label>
+					<select id="statuses">
+						<option value="-1">Все</option>
+					</select>
+					</select>
+				</div>
+				<div class="form-group">
+					<label id="remainder_label">Запасы: <img src="images/help.png" width="18" height="18" data-toggle="tooltip" data-placement="bottom" title="Наличие балансовых запасов"/> </label>
+					<select id="remainder">
+						<option value="-1">Все</option>							
+						<option value="1">Доступны для лицензирования</option>
+						<option value="2">Лицензированные</option>
+					</select>
+				</div>
+				<div class="form-group">
+					<button id="extended_search_submit" class="btn btn-default" style="float: right; margin-bottom: 20px">Применить</button>
+				</div>
+			</form>
+		</div>
+	{{/ifEq}}
+	{{#ifEq language 'en'}}
+		<div class="content">
+			<h4 align="center">Search objects</h4>
+			<form>
+				<div class="form-group">
+					<label id="resource_name_label">Deposit: </label>
+					<input type="text" id="resource_name" placeholder="Name of the deposit"/>
+				</div>
+				<div class="form-group">
+					<label id="regions_label">Region: </label>
+					<select id="regions">
+					</select>
+				</div>
+				<div class="form-group">
+					<label id="areas_label">Area: </label>
+					<select id="areas">
+					</select>
+				</div>
+				<div class="form-group">
+					<label id="resource_kinds_label">Deposit kind: </label>
+					<select id="resource_kinds">
+					</select>
+				</div>
+				<div class="form-group">
+					<label id="resource_groups_label">Deposit group: </label>
+					<select id="resource_groups">
+					</select>
+				</div>
+				<div class="form-group">
+					<label id="resource_types_label">Deposit type: </label>
+					<select id="resource_types">
+					</select>
+				</div>
+				<div class="form-group">
+					<label id="distances_label">Distance: </label>
+					<select id="distances">
+					</select>
+				</div>
+				<div class="form-group">
+					<label id="status_label">Status: </label>
+					<select id="statuses">
+						<option value="-1">All</option>
+					</select>
+					</select>
+				</div>
+				<div class="form-group">
+					<label id="remainder_label">Amount: <img src="images/help.png" width="18" height="18" data-toggle="tooltip" data-placement="bottom" title="Availability of balance reserves"/> </label>
+					<select id="remainder">
+						<option value="-1">All</option>							
+						<option value="1">Available for licensing</option>
+						<option value="2">Licensed</option>
+					</select>
+				</div>
+				<div class="form-group">
+					<button id="extended_search_submit" class="btn btn-default" style="float: right; margin-bottom: 20px">Search</button>
+				</div>
+			</form>
+		</div>
+	{{/ifEq}}
+	{{#ifEq language 'uz'}}
+		<div class="content">
+			<h4 align="center">Поиск по месторождениям</h4>
+			<form>
+				<div class="form-group">
+					<label id="resource_name_label">Месторождение: </label>
+					<input type="text" id="resource_name" placeholder="Наименование месторождения"/>
+				</div>
+				<div class="form-group">
+					<label id="regions_label">Область: </label>
+					<select id="regions">
+					</select>
+				</div>
+				<div class="form-group">
+					<label id="areas_label">Район: </label>
+					<select id="areas">
+					</select>
+				</div>
+				<div class="form-group">
+					<label id="resource_kinds_label">Вид: </label>
+					<select id="resource_kinds">
+					</select>
+				</div>
+				<div class="form-group">
+					<label id="resource_groups_label">Группа: </label>
+					<select id="resource_groups">
+					</select>
+				</div>
+				<div class="form-group">
+					<label id="resource_types_label">Тип: </label>
+					<select id="resource_types">
+					</select>
+				</div>
+				<div class="form-group">
+					<label id="distances_label">Расстояние: </label>
+					<select id="distances">
+					</select>
+				</div>
+				<div class="form-group">
+					<label id="status_label">Статус: </label>
+					<select id="statuses">
+						<option value="-1">Все</option>
+					</select>
+					</select>
+				</div>
+				<div class="form-group">
+					<label id="remainder_label">Запасы: <img src="images/help.png" width="18" height="18" data-toggle="tooltip" data-placement="bottom" title="Наличие балансовых запасов"/> </label>
+					<select id="remainder">
+						<option value="-1">Все</option>							
+						<option value="1">Доступны для лицензирования</option>
+						<option value="2">Лицензированные</option>
+					</select>
+				</div>
+				<div class="form-group">
+					<button id="extended_search_submit" class="btn btn-default" style="float: right; margin-bottom: 20px">Применить</button>
+				</div>
+			</form>
+		</div>
+	{{/ifEq}}
+</script>
+<script id="investmnent-info-template" type="text/x-handlebars-template">
+	{{#ifEq language 'ru'}}
+		<div id="investment-info-dynamic-content">	
+			<h4>
+				{{deposit_name_ru}}
+			</h4>
+			<p> 
+				<p style="margin-left: 10px">
+					Общие сведения
+				</p>
+				<table style="margin-left: 10px" border="1">
+					<tr>
+						<td>
+							Название месторождения (перспективной площади)
+						</td>
+						<td>
+							{{deposit_name_ru}} <!-- div>{{site_name_ru}}</div -->
+						</td>
+					</tr>
+					<tr>
+						<td>
+							Местоположение месторождения (участка)
+						</td>
+						<td>
+							{{region_name_ru}}, {{area_name_ru}} район
+						</td>
+					</tr>
+					<tr>
+						<td>
+							Полезное ископаемое
+						</td>
+						<td>	
+							{{minral_name_ru}}
+						</td>
+					</tr>
+					<tr>
+						<td>
+							Описание
+						</td>
+						<td>
+							<a href="/api/file/{{description_url}}" target="_blank">Открыть</a>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							Презентация
+						</td>
+						<td>
+							<a href="/api/file/{{presentation_url}}" target="_blank">Открыть</a>
+						</td>
+					</tr>
+				</table>
+			</p>
+		</div>
+	{{/ifEq}}
+	{{#ifEq language 'en'}}
+		<div id="investment-info-dynamic-content">	
+			<h4>
+				{{deposit_name_ru}}
+			</h4>
+			<p> 
+				<p style="margin-left: 10px">
+					Общие сведения
+				</p>
+				<table style="margin-left: 10px" border="1">
+					<tr>
+						<td>
+							Название месторождения (перспективной площади)
+						</td>
+						<td>
+							{{deposit_name_ru}} {{site_name_ru}}
+						</td>
+					</tr>
+					<tr>
+						<td>
+							Местоположение месторождения (участка)
+						</td>
+						<td>
+							{{region_name_ru}}, {{area_name_ru}} район
+						</td>
+					</tr>
+					<tr>
+						<td>
+							Полезное ископаемое
+						</td>
+						<td>	
+							{{minral_name_ru}}
+						</td>
+					</tr>
+					<tr>
+						<td>
+							Описание
+						</td>
+						<td>
+							<a href="/api/file/{{description_url}}">Открыть</a>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							Презентация
+						</td>
+						<td>
+							<a href="/api/file/{{presentation_url}}">Открыть</a>
+						</td>
+					</tr>
+				</table>
+			</p>
+		</div>
+	{{/ifEq}}
+	{{#ifEq language 'uz'}}
+		<div id="investment-info-dynamic-content">	
+			<h4>
+				{{deposit_name_ru}}
+			</h4>
+			<p> 
+				<p style="margin-left: 10px">
+					Общие сведения
+				</p>
+				<table style="margin-left: 10px" border="1">
+					<tr>
+						<td>
+							Название месторождения (перспективной площади)
+						</td>
+						<td>
+							{{deposit_name_ru}} {{site_name_ru}}
+						</td>
+					</tr>
+					<tr>
+						<td>
+							Местоположение месторождения (участка)
+						</td>
+						<td>
+							{{region_name_ru}}, {{area_name_ru}} район
+						</td>
+					</tr>
+					<tr>
+						<td>
+							Полезное ископаемое
+						</td>
+						<td>	
+							{{minral_name_ru}}
+						</td>
+					</tr>
+					<tr>
+						<td>
+							Описание
+						</td>
+						<td>
+							<a href="/api/file/{{description_url}}">Открыть</a>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							Презентация
+						</td>
+						<td>
+							<a href="/api/file/{{presentation_url}}">Открыть</a>
+						</td>
+					</tr>
+				</table>
+			</p>
+		</div>
+	{{/ifEq}}
+</script>
+<script id="resource-info-template" type="text/x-handlebars-template">
+	{{#ifEq language 'ru'}}
+		<div id="resource-info-dynamic-content">	
+			<h4>
+				{{deposit_name_ru}}
+			</h4>
+			<p> 
+				<p style="margin-left: 10px">
+					Общие сведения
+				</p>
+				<table style="margin-left: 10px" border="1">
+					<tr>
+						<td>
+							Название месторождения (участка)
+						</td>
+						<td>
+							{{deposit_name_ru}} {{site_name_ru}}
+						</td>
+					</tr>
+					<tr>
+						<td>
+							Местоположение месторождения (участка)
+						</td>
+						<td>
+							{{region_name_ru}}, {{area_name_ru}} район
+						</td>
+					</tr>
+					<tr>
+						<td>
+							Класс сырья
+						</td>
+						<td>	
+							{{kind_name_ru}}
+						</td>
+					</tr>
+					<tr>
+						<td>
+							Группа сырья
+						</td>
+						<td>	
+							{{group_name_ru}}
+						</td>
+					</tr>
+					<tr>
+						<td>
+							Тип сырья
+						</td>
+						<td>	
+							{{type_name_ru}}
+						</td>
+					</tr>
+					<tr>
+						<td>
+							Подтип сырья
+						</td>
+						<td>	
+							{{subtype_name_ru}}
+						</td>
+					</tr>
+					<tr>
+						<td>
+							Полезные ископаемые
+						</td>
+						<td>	
+							{{mineral_name_ru}}
+						</td>
+					</tr>
+					<tr>
+						<td>
+							Статус
+						</td>
+						<td>	
+							{{status_name_ru}}
+						</td>
+					</tr>
+					<tr>
+						<td>
+							Единица измерения запасов
+						</td>
+						<td>	
+							{{amount_unit_ru}}
+						</td>
+					</tr>
+					<tr>
+						<td>
+							Запасы на балансе госкомгеологии A,B,C1/С2
+						</td>
+						<td>	
+							{{amount_a_b_c1}}/{{amount_c2}}
+						</td>
+					</tr>
+					<tr>
+						<td>
+							Описание
+						</td>
+						<td>	
+							{{description}}
+						</td>
+					</tr>
+				</table>
+				<br>
+				{{#ifCond3 image_cut_uuid 'or' image_plan_uuid deposit_locations}}
+				<p style="margin-left: 10px">
+					Картографические материалы
+				</p>
+				<table style="margin-left: 10px" border="1"> 
+					{{#if image_cut_uuid}}
+					<tr>
+						<td>
+							Схематический разрез
+						</td>
+						<td>
+							<a href="#" id="cut_image">Открыть</a>
+						</td>
+					</tr>
+					{{/if}}
+					{{#if image_plan_uuid}}
+					<tr>
+						<td>
+							Геологическая карта
+						</td>
+						<td>
+							<a href="#" id="plan_image">Открыть</a>
+						</td>
+					</tr>
+					{{/if}}
+					{{#if deposit_locations}}
+					<tr>
+						<td>
+							Контур месторождения
+						</td>
+						<td>
+							<a href="#" id="plan_contours">Открыть</a>
+						</td>
+					</tr>
+					{{/if}}
+				</table>
+				{{/ifCond3}}
+				<br/>
+				{{#if licenses}}
+				<p style="margin-left: 10px">
+					Сведения о лицензированных запасах 
+				</p>
+				<table style="margin-left: 10px"  border="1">
+					<tr>
+						<td>
+							Компания
+						</td>
+						<td>
+							№ лицензии
+						</td>
+						<td>
+							Дата выдачи
+						</td>
+						<td>
+							Запасы A+B+C1
+						</td>
+						<td>
+							Запасы C2
+						</td>
+					</tr>
+					{{#licenses}}
+					<tr>
+						<td>{{company_name_ru}}</td>
+						<td>{{license}}</td>
+						<td>{{date_of_issue}}</td>
+						<td>{{amount_a_b_c1}}</td>
+						<td>{{amount_c2}}</td> 
+					</tr>
+					{{/licenses}}
+				</table>
+				{{/if}}
+			</p>
+		</div>
+	{{/ifEq}}
+	{{#ifEq language 'en'}}
+		<div id="resource-info-dynamic-content">	
+			<h4>
+				{{deposit_name_ru}}
+			</h4>
+			<p> 
+				<p style="margin-left: 10px">
+					General information
+				</p>
+				<table style="margin-left: 10px" border="1">
+					<tr>
+						<td>
+							Deposit (site) name
+						</td>
+						<td>
+							{{deposit_name_ru}} {{site_name_ru}}
+						</td>
+					</tr>
+					<tr>
+						<td>
+							Deposit (site) location
+						</td>
+						<td>
+							{{region_name_ru}}, {{area_name_ru}} area
+						</td>
+					</tr>
+					<tr>
+						<td>
+							Kind
+						</td>
+						<td>	
+							{{kind_name_ru}}
+						</td>
+					</tr>
+					<tr>
+						<td>
+							Group
+						</td>
+						<td>	
+							{{group_name_ru}}
+						</td>
+					</tr>
+					<tr>
+						<td>
+							Type
+						</td>
+						<td>	
+							{{type_name_ru}}
+						</td>
+					</tr>
+					<tr>
+						<td>
+							Subtype
+						</td>
+						<td>	
+							{{subtype_name_ru}}
+						</td>
+					</tr>
+					<tr>
+						<td>
+							Minerals
+						</td>
+						<td>	
+							{{mineral_name_ru}}
+						</td>
+					</tr>
+					<tr>
+						<td>
+							Status
+						</td>
+						<td>	
+							{{status_name_ru}}
+						</td>
+					</tr>
+					<tr>
+						<td>
+							Units
+						</td>
+						<td>	
+							{{amount_unit_ru}}
+						</td>
+					</tr>
+					<tr>
+						<td>
+							Available reserves A,B,C1/С2
+						</td>
+						<td>	
+							{{amount_a_b_c1}}/{{amount_c2}}
+						</td>
+					</tr>
+					<tr>
+						<td>
+							Description
+						</td>
+						<td>	
+							{{description}}
+						</td>
+					</tr>
+				</table>
+				<br>
+				{{#ifCond3 image_cut_uuid 'or' image_plan_uuid deposit_locations}}
+				<p style="margin-left: 10px">
+					Cartographic materials
+				</p>
+				<table style="margin-left: 10px" border="1"> 
+					{{#if image_cut_uuid}}
+					<tr>
+						<td>
+							Schematic image
+						</td>
+						<td>
+							<a href="#" id="cut_image">Open</a>
+						</td>
+					</tr>
+					{{/if}}
+					{{#if image_plan_uuid}}
+					<tr>
+						<td>
+							Geological map
+						</td>
+						<td>
+							<a href="#" id="plan_image">Open</a>
+						</td>
+					</tr>
+					{{/if}}
+					{{#if deposit_locations}}
+					<tr>
+						<td>
+							Contours
+						</td>
+						<td>
+							<a href="#" id="plan_contours">Open</a>
+						</td>
+					</tr>
+					{{/if}}
+				</table>
+				{{/ifCond3}}
+				<br/>
+				{{#if licenses}}
+				<p style="margin-left: 10px">
+					Licenses 
+				</p>
+				<table style="margin-left: 10px"  border="1">
+					<tr>
+						<td>
+							Organization
+						</td>
+						<td>
+							License number
+						</td>
+						<td>
+							Date of issue
+						</td>
+						<td>
+							Reserves A+B+C1
+						</td>
+						<td>
+							Reserves C2
+						</td>
+					</tr>
+					{{#licenses}}
+					<tr>
+						<td>{{company_name_ru}}</td>
+						<td>{{license}}</td>
+						<td>{{date_of_issue}}</td>
+						<td>{{amount_a_b_c1}}</td>
+						<td>{{amount_c2}}</td> 
+					</tr>
+					{{/licenses}}
+				</table>
+				{{/if}}
+			</p>
+		</div>
+	{{/ifEq}}
+	{{#ifEq language 'uz'}}
+		<div id="resource-info-dynamic-content">	
+			<h4>
+				{{deposit_name_ru}}
+			</h4>
+			<p> 
+				<p style="margin-left: 10px">
+					Общие сведения
+				</p>
+				<table style="margin-left: 10px" border="1">
+					<tr>
+						<td>
+							Название месторождения (участка)
+						</td>
+						<td>
+							{{deposit_name_ru}} {{site_name_ru}}
+						</td>
+					</tr>
+					<tr>
+						<td>
+							Местоположение месторождения (участка)
+						</td>
+						<td>
+							{{region_name_ru}}, {{area_name_ru}} район
+						</td>
+					</tr>
+					<tr>
+						<td>
+							Класс сырья
+						</td>
+						<td>	
+							{{kind_name_ru}}
+						</td>
+					</tr>
+					<tr>
+						<td>
+							Группа сырья
+						</td>
+						<td>	
+							{{group_name_ru}}
+						</td>
+					</tr>
+					<tr>
+						<td>
+							Тип сырья
+						</td>
+						<td>	
+							{{type_name_ru}}
+						</td>
+					</tr>
+					<tr>
+						<td>
+							Подтип сырья
+						</td>
+						<td>	
+							{{subtype_name_ru}}
+						</td>
+					</tr>
+					<tr>
+						<td>
+							Полезные ископаемые
+						</td>
+						<td>	
+							{{mineral_name_ru}}
+						</td>
+					</tr>
+					<tr>
+						<td>
+							Статус
+						</td>
+						<td>	
+							{{status_name_ru}}
+						</td>
+					</tr>
+					<tr>
+						<td>
+							Единица измерения запасов
+						</td>
+						<td>	
+							{{amount_unit_ru}}
+						</td>
+					</tr>
+					<tr>
+						<td>
+							Запасы на балансе госкомгеологии A,B,C1/С2
+						</td>
+						<td>	
+							{{amount_a_b_c1}}/{{amount_c2}}
+						</td>
+					</tr>
+					<tr>
+						<td>
+							Описание
+						</td>
+						<td>	
+							{{description}}
+						</td>
+					</tr>
+				</table>
+				<br>
+				{{#ifCond3 image_cut_uuid 'or' image_plan_uuid deposit_locations}}
+				<p style="margin-left: 10px">
+					Картографические материалы
+				</p>
+				<table style="margin-left: 10px" border="1"> 
+					{{#if image_cut_uuid}}
+					<tr>
+						<td>
+							Схематический разрез
+						</td>
+						<td>
+							<a href="#" id="cut_image">Открыть</a>
+						</td>
+					</tr>
+					{{/if}}
+					{{#if image_plan_uuid}}
+					<tr>
+						<td>
+							Геологическая карта
+						</td>
+						<td>
+							<a href="#" id="plan_image">Открыть</a>
+						</td>
+					</tr>
+					{{/if}}
+					{{#if deposit_locations}}
+					<tr>
+						<td>
+							Контур месторождения
+						</td>
+						<td>
+							<a href="#" id="plan_contours">Открыть</a>
+						</td>
+					</tr>
+					{{/if}}
+				</table>
+				{{/ifCond3}}
+				<br/>
+				{{#if licenses}}
+				<p style="margin-left: 10px">
+					Сведения о лицензированных запасах 
+				</p>
+				<table style="margin-left: 10px"  border="1">
+					<tr>
+						<td>
+							Компания
+						</td>
+						<td>
+							№ лицензии
+						</td>
+						<td>
+							Дата выдачи
+						</td>
+						<td>
+							Запасы A+B+C1
+						</td>
+						<td>
+							Запасы C2
+						</td>
+					</tr>
+					{{#licenses}}
+					<tr>
+						<td>{{company_name_ru}}</td>
+						<td>{{license}}</td>
+						<td>{{date_of_issue}}</td>
+						<td>{{amount_a_b_c1}}</td>
+						<td>{{amount_c2}}</td> 
+					</tr>
+					{{/licenses}}
+				</table>
+				{{/if}}
+			</p>
+		</div>
+	{{/ifEq}}
+</script>

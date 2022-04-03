@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+		<meta charset="utf-8">
+		<title>Минерально-сырьевая база Узбекистана</title>
+		<link rel="stylesheet" type="text/css" href="stylesheets/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+		<script src="javascripts/jquery-3.3.1.js"></script>
+		<script src="javascripts/bootstrap.min.js"></script>
+		<script src="javascripts/handlebars.js"></script>
+		<script src="javascripts/auto-zoom.js"></script>
+		<script src="javascripts/config.js"></script>
+		<script src="javascripts/geoapi.js"></script>
+	</head>
+	<body>
+		<div id="templates">
+		</div>
+		<div id="header">
+		</div>
+		<div id="map"></div>
+		<div id="spinner">
+			<img src="images/loader.gif"/>
+		</div>
+		<a class="resource-print-button" href="#"></a>
+		<a class="resource-info-button" href="#"></a>
+		<div id="resource-info" style="display: none">
+		</div>
+		<a class="investment-info-button" href="#"></a>
+		<div id="investment-info" style="display: none">
+		</div>
+		<a id="login-window-close-button" href="#"></a>
+		<div id="login-info" style="display: none">
+		</div>
+		<a id="clustered-resources-close-button" href="#"></a>
+		<div id="clustered-resources-info" style="display: none">
+		</div>
+		<a id="close_image_pane" href="#"></a>
+		<a id="magnify_image_pane" href="#"></a>
+		<div id="image-pane" style="display: none">
+			<img width="100%">
+		</div>
+		<a id="close_contours_pane" href="#"></a>
+		<a id="magnify_contours_pane" href="#"></a>
+		<div id="contours-pane" style="display: none">
+			<div id="inlinemap"></div>
+		</div>
+		<a id="extended-search-form-close-button"></a>
+		<div id="extended-search-form" style="display: none">
+		</div>
+		<a id="investments-search-form-close-button"></a>
+		<div id="investments-search-form" style="display: none">
+		</div>
+		<a id="registration-form-close-button"></a>
+		<div id="registration-form" style="display: none">
+		</div>
+		<a id="help-close-button" href="#"></a>
+		<div id="help-info" style="display: none">
+		</div>
+		<div id="resources" style="display: none">
+		</div>
+		<a id="message-window-close-button" href="#"></a>
+		<div id="message-window" style="display: none">
+		</div>
+		<div style="position: absolute; bottom: 10px; left: 10px; z-index: 99; font-weight: bold">
+			По состоянию Государственного Баланса Республики Узбекистан на 01.01.2022
+		</div>
+		<script src="javascripts/init.js"></script>
+		<script defer src="https://map.uzgeolcom.uz/api/load_map_library/"></script>
+		<!-- script defer src="http://217.29.112.158/api/load_map_library/"></script-->
+		<script src="javascripts/app.js"></script>
+	</body>
+</html>

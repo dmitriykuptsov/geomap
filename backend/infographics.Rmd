@@ -1,0 +1,60 @@
+---
+title: "Статистика"
+output: html_document
+params:
+    csv_file_1: "test.csv"
+    csv_file_2: "test2.csv"
+    csv_file_3: "test3.csv"
+---
+
+```{r echo=F, include=F}
+library(ggplot2);
+library(dplyr);
+```
+
+```{r echo=F}
+data<-read.csv(file=params$csv_file_1, sep=";", header=T);
+```
+
+Данная статистическая информация была собрана из текущей базы данных. 
+Всего найдено лицензий в базе данных **`r length(data[, 1])`**.
+
+Распределение количества лицензий по областям:
+
+```{r echo=F}
+data %>% group_by(region) %>% ggplot(aes(x=region)) + geom_bar(fill="dark red") + coord_flip() + ylab("Количество лицензий") + xlab("Область")
+```
+
+Распределение количества лицензий по сроку действия:
+
+```{r echo=F}
+data %>% mutate(year=factor(date_of_issue + 5)) %>% group_by(year) %>% ggplot(aes(x=year)) + geom_bar(fill="dark red") + coord_flip() + xlab("Год окончания срока действия") + ylab("Количество лицензий")
+```
+
+```{r echo=F}
+data<-read.csv(file=params$csv_file_2, sep=";", header=T);
+```
+
+Всего в базе данных найдено **`r length(data[, 1])`** объект(ов).
+
+Распределение количества объектов по областям:
+
+```{r echo=F, warnings=F, message=F}
+data %>% group_by(region) %>% ggplot(aes(x=region)) + geom_bar(fill="dark red") + coord_flip() + ylab("Количество объектов") + xlab("Область")
+library(knitr)
+data <- data %>% group_by(region) %>% summarize(count = n())
+data <- data %>% arrange(desc(count))
+names(data) <- c("Область", "Количество")
+kable(data, caption="Количество объектов")
+```
+
+```{r echo=F}
+data<-read.csv(file=params$csv_file_3, sep=";", header=T);
+```
+
+Распределение степени доступности ресурса:
+
+```{r echo=F, message=F, warningns=F}
+data %>% mutate(available_pnt=available*100) %>% ggplot(aes(x=available_pnt)) + geom_histogram(fill="dark red") + ylab("Количество") + xlab("Доступно ресурсов (%)");
+```
+
